@@ -3,6 +3,7 @@ import 'package:flutter_learning/database_1.dart';
 import 'package:flutter_learning/details_page.dart';
 import 'package:flutter_learning/grid_1.dart';
 import 'package:flutter_learning/list_1.dart';
+import 'package:flutter_learning/pageview/page_view_1.dart';
 
 import 'models/cateory_model.dart';
 
@@ -41,13 +42,21 @@ class SubCategories extends StatelessWidget {
             child: ListTile(
               leading:Text(subcategory.subItemId.toString()) ,
               title: Text(subcategory.name),
+              ///navigation callback
               onTap: () {
                 if(id==1&&subcategory.subItemId==1) {
                   Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const ListOne(),
+                    builder: (context) => const PageViewOne(),
                   ),
                 );
+                }
+                else if(id==1&&subcategory.subItemId==2) {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const ListOne(),
+                    ),
+                  );
                 }
                else if(id==2&&subcategory.subItemId==1) {
                   Navigator.of(context).push(
@@ -56,10 +65,10 @@ class SubCategories extends StatelessWidget {
                     ),
                   );
                 }
-               else if(id==3&&subcategory.subItemId==1) {
+               else if(id==2&&subcategory.subItemId==2) {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => const DatabaseOne(),
+                      builder: (context) => const GridOne(),
                     ),
                   );
                 }
