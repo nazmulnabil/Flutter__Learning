@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "List",
+      "subitem": [
+        {
+          "name": "List from Static Data using listtile"
+        },
+        {
+          "name": "List from Static Data using Card"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Grid",
+      "subitem": [
+        {
+          "name": "Grid from Static Data using listtile"
+        },
+        {
+          "name": "Grid from Static Data using Card"
+        }
+      ]
+    }
+  ]
+}
